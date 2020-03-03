@@ -193,7 +193,7 @@
         <scene sceneID="8U4-pm-CCk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a5R-TM-eRF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Featured" id="84r-bA-46t" userLabel="Featured"/>
+                    <tabBarItem key="tabBarItem" title="Featured" image="icon_g_heart" id="84r-bA-46t" userLabel="Featured"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S0i-sC-HgK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -212,7 +212,7 @@
         <scene sceneID="vSv-ny-5HP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fvt-CE-S4t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="bV1-yp-naf" userLabel="Favorites"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="icon_heart" id="bV1-yp-naf" userLabel="Favorites"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBo-hl-Ina">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
