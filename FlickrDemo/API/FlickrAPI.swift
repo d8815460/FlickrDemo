@@ -61,7 +61,7 @@ class FlickrAPI {
     }
     
     func getPhotos(searchURL: String,
-                   handler: @escaping (_ depthJson: PhotoResults?, _ error: Error?) -> Void) {
+                   handler: @escaping (_ depthJson: PhotoResults?, _ error: NSError?) -> Void) {
         
         self.alamoFireManager.request(searchURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).validate(statusCode: 200..<600).validate(contentType: ["application/json"]).responseJSON { (response) in
             let success = self.validateResponseSuccess(response)
@@ -71,13 +71,13 @@ class FlickrAPI {
                     let depthJson = try JSONDecoder().decode(PhotoResults.self, from: (response.data)!)
                     handler(depthJson, nil)
                 } catch {
-                    let error = NSError()
+                    let error = NSError(domain: "", code: 0, userInfo: ["detail": "解析JSON失敗"])
                     handler(nil, error)
                 }
             } else {
                 do {
                     let error = try JSONDecoder().decode(FlickrError.self, from: (response.data)!)
-                    handler(nil, error)
+                    handler(nil, error as NSError)
                 } catch {
                     print("get Depth API unknow error, please try again.")
                 }

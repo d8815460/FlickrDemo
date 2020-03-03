@@ -227,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="-733.33333333333337" y="603.34821428571422"/>
         </scene>
-        <!--My Favorites Collection View Controller-->
+        <!--我的最愛-->
         <scene sceneID="H4Z-Ix-ioi">
             <objects>
                 <collectionViewController id="Auj-pG-anu" customClass="MyFavoritesCollectionViewController" customModule="FlickrDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,7 +306,7 @@
                             <outlet property="delegate" destination="Auj-pG-anu" id="Ra6-0R-GQQ"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="rGy-R0-tYQ"/>
+                    <navigationItem key="navigationItem" title="我的最愛" id="rGy-R0-tYQ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aQ-8t-nw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

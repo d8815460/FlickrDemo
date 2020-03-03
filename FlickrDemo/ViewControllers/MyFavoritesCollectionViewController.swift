@@ -83,6 +83,7 @@ class MyFavoritesCollectionViewController: UICollectionViewController {
 
 extension MyFavoritesCollectionViewController: CustomClassLayoutDelegate {
     func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, with width: CGFloat) -> CGFloat {
+        if indexPath.row + 1 > self.photos!.count { return 0 }
         let photo =  self.photos?[indexPath.row]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let ratio:CGSize?
