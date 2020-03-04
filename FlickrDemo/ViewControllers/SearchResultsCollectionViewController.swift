@@ -121,7 +121,7 @@ extension SearchResultsCollectionViewController: CustomClassLayoutDelegate {
         if photo.width_m == 0 {
             ratio = CGSize(width: 1, height: 1)
         } else {
-            ratio = CGSize(width: CGFloat(photo.width_m), height: CGFloat(photo.height_m))
+            ratio = CGSize(width: CGFloat(photo.width_m ?? 0), height: CGFloat(photo.height_m ?? 0))
         }
         
         let rect =  AVMakeRect(aspectRatio: ratio!, insideRect: boundingRect)
@@ -181,9 +181,9 @@ extension SearchResultsCollectionViewController: PhotoCellDelegate {
             } else {
                 let dbphoto = DBPhoto()
                 dbphoto.id = photo.id
-                dbphoto.height_m = photo.height_m
-                dbphoto.width_m = photo.width_m
-                dbphoto.url_m = photo.url_m
+                dbphoto.height_m = photo.height_m ?? 0
+                dbphoto.width_m = photo.width_m ?? 0
+                dbphoto.url_m = photo.url_m ?? ""
                 dbphoto.islike = true
                 try! realm.write {
                     realm.add(dbphoto)

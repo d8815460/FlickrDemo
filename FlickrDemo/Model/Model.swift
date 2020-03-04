@@ -23,16 +23,16 @@ struct Photos: Hashable, Codable {
 
 struct Photo: Hashable, Codable {
     var id: String
-    var owner: String
-    var secret: String
-    var server: String
-    var farm: Int
-    var title: String
-    var ispublic: Int
-    var isfriend: Int
-    var isfamily: Int
-    var url_m: String
-    var height_m: Int
-    var width_m: Int
+    var owner: String?
+    var secret: String?
+    var server: String?
+    var farm: Int?
+    var title: String?
+    var ispublic: Int?
+    var isfriend: Int?
+    var isfamily: Int?
+    var url_m: String?
+    var height_m: Int?
+    var width_m: Int?
     var islike: Bool?
 }
