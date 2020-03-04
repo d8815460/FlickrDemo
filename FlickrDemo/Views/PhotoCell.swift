@@ -45,6 +45,10 @@ class PhotoCell: UICollectionViewCell {
     }
     
     private func fetchImage(_ url: String) {
+        if url == "" {
+            self.image.image = UIImage()
+            return
+        }
         let imageURL = URL(string: url)
         let task = URLSession.shared.dataTask(with: imageURL!) { (data, response, error) in
             if error == nil {

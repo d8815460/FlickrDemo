@@ -121,7 +121,7 @@ extension SearchResultsCollectionViewController: CustomClassLayoutDelegate {
         if photo.width_m == 0 {
             ratio = CGSize(width: 1, height: 1)
         } else {
-            ratio = CGSize(width: CGFloat(photo.width_m ?? 0), height: CGFloat(photo.height_m ?? 0))
+            ratio = CGSize(width: CGFloat(photo.width_m ?? 1), height: CGFloat(photo.height_m ?? 1))
         }
         
         let rect =  AVMakeRect(aspectRatio: ratio!, insideRect: boundingRect)
